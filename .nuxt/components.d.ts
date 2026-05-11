@@ -38,6 +38,10 @@ export const TestimonialSection: typeof import("../app/components/TestimonialSec
 export const TestimonialsLeadMagnet: typeof import("../app/components/TestimonialsLeadMagnet.vue")['default']
 export const TreasurySection: typeof import("../app/components/TreasurySection.vue")['default']
 export const UVRScanner: typeof import("../app/components/UVRScanner.vue")['default']
+export const MoleculesHeroContent: typeof import("../app/components/molecules/HeroContent.vue")['default']
+export const MoleculesHeroHookCounter: typeof import("../app/components/molecules/HeroHookCounter.vue")['default']
+export const UiBaseButton: typeof import("../app/components/ui/BaseButton.vue")['default']
+export const UiTikTokEmbed: typeof import("../app/components/ui/TikTokEmbed.vue")['default']
 export const NuxtWelcome: typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']
 export const NuxtLayout: typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']
 export const NuxtErrorBoundary: typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']
@@ -85,6 +89,10 @@ export const LazyTestimonialSection: LazyComponent<typeof import("../app/compone
 export const LazyTestimonialsLeadMagnet: LazyComponent<typeof import("../app/components/TestimonialsLeadMagnet.vue")['default']>
 export const LazyTreasurySection: LazyComponent<typeof import("../app/components/TreasurySection.vue")['default']>
 export const LazyUVRScanner: LazyComponent<typeof import("../app/components/UVRScanner.vue")['default']>
+export const LazyMoleculesHeroContent: LazyComponent<typeof import("../app/components/molecules/HeroContent.vue")['default']>
+export const LazyMoleculesHeroHookCounter: LazyComponent<typeof import("../app/components/molecules/HeroHookCounter.vue")['default']>
+export const LazyUiBaseButton: LazyComponent<typeof import("../app/components/ui/BaseButton.vue")['default']>
+export const LazyUiTikTokEmbed: LazyComponent<typeof import("../app/components/ui/TikTokEmbed.vue")['default']>
 export const LazyNuxtWelcome: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/welcome.vue")['default']>
 export const LazyNuxtLayout: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-layout")['default']>
 export const LazyNuxtErrorBoundary: LazyComponent<typeof import("../node_modules/nuxt/dist/app/components/nuxt-error-boundary.vue")['default']>
