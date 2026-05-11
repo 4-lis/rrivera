@@ -1,6 +1,6 @@
-/// <reference types="@nuxt/telemetry" />
 /// <reference types="@nuxtjs/tailwindcss" />
 /// <reference types="@nuxtjs/google-fonts" />
+/// <reference types="@nuxt/telemetry" />
 /// <reference path="types/nitro-layouts.d.ts" />
 /// <reference path="types/builder-env.d.ts" />
 /// <reference types="nuxt" />
