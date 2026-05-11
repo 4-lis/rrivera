@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: auto; /* Let Lenis handle smooth scrolling */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: #0a0a0a;
+  }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    color: #f5f5f5;
+    background-color: #0a0a0a;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: rgba(99, 91, 255, 0.35);
+    color: #ffffff;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+}
+
+@layer components {
+  .container-main {
+    @apply max-w-[1280px] mx-auto px-6 lg:px-12;
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, #635BFF 0%, #8B5CF6 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #635BFF 0%, #8B5CF6 100%);
+  }
+
+  /* Card chip placeholder — reusable */
+  .card-chip {
+    @apply w-10 h-7 bg-yellow-400/80 rounded-sm;
+    background: linear-gradient(135deg, #fcd34d 0%, #f59e0b 100%);
+  }
+}
+
+/* ─── Lenis Smooth Scroll ───────────────────────────────────────── */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
+
+/* ─── Custom Scrollbar (dark theme) ─────────────────────────────── */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #2d2d2d;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #404040;
+}
+
+/* ─── GPU Compositing helpers ────────────────────────────────────── */
+.will-change-transform {
+  will-change: transform;
+}
+
+.gpu-layer {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
