@@ -2,6 +2,18 @@
   <div 
     class="absolute inset-0 z-50 flex items-center justify-center pointer-events-none"
   >
+    <!-- Cinematic Background Layer -->
+    <div class="absolute inset-0 z-[-1] overflow-hidden">
+      <img 
+        src="/hero-bg.png" 
+        class="hook-bg w-full h-full object-cover opacity-40 scale-110"
+        alt="Architectural background"
+      />
+      <!-- Dark Gradient Overlay -->
+      <div class="absolute inset-0 bg-gradient-to-b from-neutral-950 via-transparent to-neutral-950"></div>
+      <div class="absolute inset-0 bg-neutral-950/60"></div>
+    </div>
+
     <div 
       class="counter-number text-6xl md:text-8xl lg:text-[8rem] font-bold text-red-500 drop-shadow-[0_0_40px_rgba(239,68,68,0.8)] tracking-tighter"
       style="transform-origin: center center;"
@@ -16,6 +28,7 @@
     </div>
   </div>
 </template>
+
 
 <script setup>
 import { ref, onMounted, computed } from 'vue'

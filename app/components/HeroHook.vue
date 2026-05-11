@@ -53,8 +53,17 @@ onMounted(() => {
       duration: 3,
       ease: 'power3.in'
     }, 0)
+
+    // Dolly Zoom effect: Background scales DOWN while number scales UP
+    tl.to('.hook-bg', {
+      scale: 1,
+      opacity: 0,
+      duration: 3,
+      ease: 'power2.inOut'
+    }, 0)
     
     tl.to('.scroll-hint', {
+
       opacity: 0,
       duration: 0.5
     }, 0)
