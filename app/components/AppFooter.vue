@@ -21,9 +21,21 @@
         </a>
       </div>
 
-      <p class="text-xs text-neutral-600 uppercase tracking-widest text-center">
+      <p class="text-xs text-neutral-600 uppercase tracking-widest text-center mb-8">
         © 2026 El Arquitecto Financiero. Cumplimiento con Ley de Vivienda 546/99.
       </p>
+
+      <!-- Developer Logo -->
+      <div class="flex flex-col items-center gap-3">
+        <span class="text-[9px] text-neutral-700 uppercase tracking-[0.3em] font-bold">Developed by</span>
+        <a href="https://metrixcolombia.com" target="_blank" class="group transition-all duration-500">
+          <img 
+            src="https://metrixcolombia.com/_astro/metrix.DblLk6vn.webp" 
+            alt="Metrix AI SAS" 
+            class="h-5 w-auto opacity-30 grayscale brightness-200 group-hover:opacity-100 group-hover:grayscale-0 transition-all duration-500"
+          >
+        </a>
+      </div>
 
     </div>
   </footer>

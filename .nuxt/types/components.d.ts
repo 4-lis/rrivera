@@ -24,7 +24,6 @@ interface _GlobalComponents {
   CtaBannerSection: typeof import("../../app/components/CtaBannerSection.vue")['default']
   DashboardMockup: typeof import("../../app/components/DashboardMockup.vue")['default']
   FeaturesGridSection: typeof import("../../app/components/FeaturesGridSection.vue")['default']
-  FooterBase: typeof import("../../app/components/FooterBase.vue")['default']
   Hero: typeof import("../../app/components/Hero.vue")['default']
   HeroHook: typeof import("../../app/components/HeroHook.vue")['default']
   HeroSection: typeof import("../../app/components/HeroSection.vue")['default']
@@ -72,7 +71,6 @@ interface _GlobalComponents {
   LazyCtaBannerSection: LazyComponent<typeof import("../../app/components/CtaBannerSection.vue")['default']>
   LazyDashboardMockup: LazyComponent<typeof import("../../app/components/DashboardMockup.vue")['default']>
   LazyFeaturesGridSection: LazyComponent<typeof import("../../app/components/FeaturesGridSection.vue")['default']>
-  LazyFooterBase: LazyComponent<typeof import("../../app/components/FooterBase.vue")['default']>
   LazyHero: LazyComponent<typeof import("../../app/components/Hero.vue")['default']>
   LazyHeroHook: LazyComponent<typeof import("../../app/components/HeroHook.vue")['default']>
   LazyHeroSection: LazyComponent<typeof import("../../app/components/HeroSection.vue")['default']>

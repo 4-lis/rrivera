@@ -24,7 +24,6 @@ export const CreditCardSection: typeof import("../app/components/CreditCardSecti
 export const CtaBannerSection: typeof import("../app/components/CtaBannerSection.vue")['default']
 export const DashboardMockup: typeof import("../app/components/DashboardMockup.vue")['default']
 export const FeaturesGridSection: typeof import("../app/components/FeaturesGridSection.vue")['default']
-export const FooterBase: typeof import("../app/components/FooterBase.vue")['default']
 export const Hero: typeof import("../app/components/Hero.vue")['default']
 export const HeroHook: typeof import("../app/components/HeroHook.vue")['default']
 export const HeroSection: typeof import("../app/components/HeroSection.vue")['default']
@@ -72,7 +71,6 @@ export const LazyCreditCardSection: LazyComponent<typeof import("../app/componen
 export const LazyCtaBannerSection: LazyComponent<typeof import("../app/components/CtaBannerSection.vue")['default']>
 export const LazyDashboardMockup: LazyComponent<typeof import("../app/components/DashboardMockup.vue")['default']>
 export const LazyFeaturesGridSection: LazyComponent<typeof import("../app/components/FeaturesGridSection.vue")['default']>
-export const LazyFooterBase: LazyComponent<typeof import("../app/components/FooterBase.vue")['default']>
 export const LazyHero: LazyComponent<typeof import("../app/components/Hero.vue")['default']>
 export const LazyHeroHook: LazyComponent<typeof import("../app/components/HeroHook.vue")['default']>
 export const LazyHeroSection: LazyComponent<typeof import("../app/components/HeroSection.vue")['default']>
