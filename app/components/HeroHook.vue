@@ -46,34 +46,37 @@ onMounted(() => {
     })
 
     // Zoom the red number MASSIVELY so it breaks/fades past the camera
-    // We target classes within the components for GSAP simplicity in this architecture
+    // Added blur and autoAlpha to prevent flickering and ensure a clean exit
     tl.to('.counter-number', {
-      scale: 50,
-      opacity: 0,
+      scale: 60,
+      autoAlpha: 0,
+      filter: 'blur(20px)', // Professional blur as it gets too close to "camera"
       duration: 3,
-      ease: 'power3.in'
+      ease: 'power4.in'
     }, 0)
 
     // Dolly Zoom effect: Background scales DOWN while number scales UP
     tl.to('.hook-bg', {
       scale: 1,
-      opacity: 0,
+      autoAlpha: 0,
+      filter: 'blur(10px)',
       duration: 3,
       ease: 'power2.inOut'
     }, 0)
     
     tl.to('.scroll-hint', {
-
-      opacity: 0,
+      autoAlpha: 0,
       duration: 0.5
     }, 0)
 
     // Fade in the actual Hero Content
+    // Delaying it slightly more ensures the counter is mostly gone
     tl.to([heroContent.value?.$el, bgGlow.value], {
-      opacity: 1,
-      duration: 1,
+      autoAlpha: 1,
+      duration: 1.2,
       ease: 'power2.out'
-    }, 1.5) // Starts mid-zoom
+    }, 1.8) // Adjusted timing for smoother hand-off
+
 
     // Animate Hero text lines (Masking)
     tl.to('.hero-line', {
@@ -100,15 +103,41 @@ onMounted(() => {
       ease: 'power3.out'
     }, 2.5)
 
-    // 2. Independent continuous yoyo animation for the floating video
-    gsap.to('.floating-video', {
-      y: -15,
-      duration: 3,
-      ease: 'sine.inOut',
-      yoyo: true,
+    // 2. High-Fidelity Spatial Drift Animation for the floating video
+    // This creates a much more premium "weightless" feel
+    const driftTl = gsap.timeline({
       repeat: -1,
-      delay: 1 // Start a bit after it comes in
+      defaults: { duration: 4, ease: 'sine.inOut' }
     })
+
+    driftTl.to('.floating-video', {
+      y: -20,
+      rotationZ: 2,
+      rotationY: 5,
+    })
+    .to('.floating-video', {
+      y: 10,
+      x: 10,
+      rotationZ: -1,
+      rotationY: -5,
+    })
+    .to('.floating-video', {
+      y: 0,
+      x: 0,
+      rotationZ: 0,
+      rotationY: 0,
+    })
+
+    // 3. Add a subtle "breathing" scale effect to the background glow
+    gsap.to(bgGlow.value, {
+      scale: 1.2,
+      opacity: 0.2,
+      duration: 5,
+      repeat: -1,
+      yoyo: true,
+      ease: 'sine.inOut'
+    })
+
 
   }, heroContainer.value)
 })
