@@ -6,7 +6,7 @@
       <div class="relative w-full aspect-[4/5] md:aspect-square lg:aspect-[4/5] rounded-[2rem] overflow-hidden shadow-2xl bg-neutral-200">
         <img 
           ref="parallaxImage"
-          src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop" 
+          src="/public/rafael_rivera_profile.jpg" 
           alt="Rafael Rivera" 
           class="absolute inset-0 w-full h-[120%] -top-[10%] object-cover object-center"
         />

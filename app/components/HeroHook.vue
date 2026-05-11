@@ -53,11 +53,9 @@
         <div class="w-full lg:w-1/2 flex justify-center lg:justify-end mt-12 lg:mt-0 z-20">
           <div 
             ref="floatingVideo"
-            class="relative w-full max-w-[300px] aspect-[9/16] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden flex items-center justify-center opacity-0 translate-y-8"
+            class="relative w-full max-w-[325px] rounded-3xl bg-white/5 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] overflow-hidden flex items-center justify-center opacity-0 translate-y-8"
           >
-            <div class="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-500/10"></div>
-            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-blue-400 relative z-10 opacity-80"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"></path><polyline points="14 2 14 8 20 8"></polyline><polygon points="10 16 16 12 10 8 10 16"></polygon></svg>
-            <span class="absolute bottom-6 text-xs text-blue-300 uppercase tracking-widest font-medium z-10">Video de TikTok</span>
+            <blockquote class="tiktok-embed" cite="https://www.tiktok.com/@rafaelmrivera/video/7568528939937713429" data-video-id="7568528939937713429" style="max-width: 605px;min-width: 325px;" > <section> <a target="_blank" title="@rafaelmrivera" href="https://www.tiktok.com/@rafaelmrivera?refer=embed">@rafaelmrivera</a> Respuesta a @janethgarca37 <a title="tiktokviral" target="_blank" href="https://www.tiktok.com/tag/tiktokviral?refer=embed">#tiktokviral</a> <a title="tiktoklive" target="_blank" href="https://www.tiktok.com/tag/tiktoklive?refer=embed">#tiktoklive</a> #<a title="livehighlights" target="_blank" href="https://www.tiktok.com/tag/livehighlights?refer=embed">#livehighlights</a> <a title="paidpartnership" target="_blank" href="https://www.tiktok.com/tag/paidpartnership?refer=embed">#PaidPartnership</a> <a title="liveincentiveprogram" target="_blank" href="https://www.tiktok.com/tag/liveincentiveprogram?refer=embed">#LIVEIncentiveProgram</a> <a target="_blank" title="♬ Classic Rock N Roll Vibe - FiniteMusicForge" href="https://www.tiktok.com/music/Classic-Rock-N-Roll-Vibe-7376311406062520370?refer=embed">♬ Classic Rock N Roll Vibe - FiniteMusicForge</a> </section> </blockquote>
           </div>
         </div>
 
@@ -72,6 +70,7 @@
 
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue'
+import { useHead } from '#imports'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -87,6 +86,12 @@ const bgGlow = ref(null)
 const counterText = ref(null)
 
 let ctx
+
+useHead({
+  script: [
+    { src: 'https://www.tiktok.com/embed.js', async: true }
+  ]
+})
 
 onMounted(() => {
   if (!process.client) return
